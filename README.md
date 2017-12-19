@@ -1,3 +1,3 @@
-# Caesar Cipher Cracker
+# CryptoCiphers
 
-This script will brute force attack a text encrypted with the Caesar Cipher.
+This is a tool to encrypt, decrypt and attack several ciphers. This is a learning project.

@@ -1,6 +1,6 @@
 {
-  "name": "crypto",
-  "version": "1.0.0",
+  "name": "cryptociphers",
+  "version": "0.0.1",
   "description": "This script will brute force attack a text encrypted with the Caesar Cipher.",
   "main": "index.js",
   "scripts": {

@@ -4,7 +4,7 @@ import decrypt from '../caesar/decrypt';
 import { readFile, writeFile, removeFileNameExtension } from './lib';
 
 program
-  .version('0.1.0')
+  .version('0.0.1')
   .usage('[options]')
   .option('-f, --file <file>', 'input file with the encrypted message')
   .parse(process.argv);
