@@ -7,3 +7,5 @@ program
   .command('encrypt [options]', 'encrypts a file with the caesar cipher')
   .command('brute-force [options]', 'encrypts a file with the caesar cipher')
   .parse(process.argv);
+
+// TODO: frecuency analysis attack.

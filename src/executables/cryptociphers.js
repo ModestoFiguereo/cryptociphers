@@ -7,4 +7,5 @@ program
   .version('0.0.1')
   .usage('[command] [options]')
   .command('caesar [action]', 'handles caesar cipher encryption and decription')
+  .command('vigenere [action]', 'handles vigenere cipher encryption and decription')
   .parse(process.argv);

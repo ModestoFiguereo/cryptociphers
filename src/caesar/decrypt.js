@@ -1,7 +1,7 @@
-import { unshift, ALPHABET } from './lib';
+import { unshift, normalizeMessage, ALPHABET } from '../lib';
 
 export default function decrypt(text, key) {
-  return text.split('')
+  return normalizeMessage(text)
     .map(letter => unshift(letter, key, ALPHABET))
     .join('');
 }
