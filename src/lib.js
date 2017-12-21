@@ -1,6 +1,14 @@
 import fs from 'fs';
 
 export const ALPHABET = 'abcdefghijklmnopqrstuvwxyz';
+export const POLYBIUS_SQUARE = [
+  ['a', 'b', 'c', 'd', 'e'],
+  ['f', 'g', 'h', 'i', 'j'],
+  ['k', 'l', 'm', 'n', 'o'],
+  ['p', 'q', 'r', 's', 't'],
+  ['u', 'v', 'w', 'x', 'y'],
+];
+export const POLYBIUS_SIZE = 5;
 
 export function shift(letter, key, alphabet) {
   const originalPosition = alphabet.indexOf(letter);

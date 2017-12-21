@@ -1,6 +1,6 @@
 import 'babel-polyfill';
 import program from 'commander';
-import decrypt from '../vigenere/decrypt';
+import decode from '../polybius/decode';
 import { readFile, writeFile } from './lib';
 
 program
@@ -8,14 +8,13 @@ program
   .usage('[options]')
   .option('-f, --file <file>', 'input file with the plaintext message')
   .option('-o, --output <file>', 'output file with the encrypted message')
-  .option('-k, --key <keyword>', 'vigenere cipher key')
   .parse(process.argv);
 
 (async function main() {
-  const { file, key, output } = program;
+  const { file, output } = program;
 
   const encryptedText = await readFile(file);
-  const plaintext = decrypt(encryptedText, key);
+  const plaintext = decode(encryptedText);
 
   await writeFile(output, plaintext);
 

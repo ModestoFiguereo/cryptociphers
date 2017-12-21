@@ -1,7 +1,7 @@
-import { shift, mod, ALPHABET } from '../lib';
+import { shift, mod, ALPHABET, normalizeMessage } from '../lib';
 
 export default function encrypt(text, key) {
-  const plain = text.trim().toLowerCase().split('').filter(char => char.trim() !== '');
+  const plain = normalizeMessage(text);
   const encrypted = [];
 
   for (let i = 0; i < plain.length; i += 1) {

@@ -1,24 +1,23 @@
 import 'babel-polyfill';
 import program from 'commander';
-import encrypt from '../vigenere/encrypt';
+import encode from '../polybius/encode';
 import { readFile, writeFile } from './lib';
 
 program
   .version('0.0.1')
   .usage('[options]')
   .option('-f, --file <file>', 'input file with the plaintext message')
-  .option('-o, --output <file>', 'output file with the encrypted message')
-  .option('-k, --key <keyword>', 'vigenere cipher key')
+  .option('-o, --output <file>', 'output file with the encoded message')
   .parse(process.argv);
 
 (async function main() {
-  const { file, key, output } = program;
+  const { file, output } = program;
 
   const text = await readFile(file);
 
-  const encryptedText = encrypt(text, key);
+  const encodedText = encode(text);
 
-  await writeFile(output, encryptedText);
+  await writeFile(output, encodedText);
 
   console.log('***DONE***');
 }());
